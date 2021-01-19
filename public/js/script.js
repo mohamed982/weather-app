@@ -10,6 +10,9 @@ const forecast=async (location)=>{
                     <h3>Current Temperature : <span>${data.temperature}</span> C</h3>
                     <h3>Feels Like : <span>${data.feelslike}</span> C</h3>
                     <h3>Precip : <span>${data.precip}</span>%</h3>
+                    <h3>Wind Speed : <span>${data.wind_speed}</span></h3>
+                    <h3>Wind Degree : <span>${data.wind_degree}</span></h3>
+                    <h3>Humidity : <span>${data.humidity}</span>%</h3>
                   `;
     results.insertAdjacentHTML('beforeend',markup);
    }else{

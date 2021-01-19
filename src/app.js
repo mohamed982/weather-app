@@ -122,14 +122,17 @@ app.get('/forecast',(req,res)=>{
             error : 'Location is not specified'
         });
     } else{  
-        geocode.Forcast(location,(err,{temperature,feelslike,precip}={})=>{
+        geocode.Forcast(location,(err,{temperature,feelslike,precip,wind_speed,wind_degree,humidity}={})=>{
             if(!err)
             {
                 res.send({
                     location,
                     temperature ,
                     feelslike ,
-                    precip 
+                    precip ,
+                    wind_speed,
+                    wind_degree,
+                    humidity
                 });
             } else
             {
